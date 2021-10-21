@@ -1,0 +1,99 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  dev
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volVectorField;
+    location    "0";
+    object      U;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 1 -1 0 0 0 0];
+
+internalField   uniform (0 0 0);
+
+boundaryField
+{
+   /* inlet
+    {
+        type            fixedValue;
+        value			uniform (0 0 -1);
+    }*/
+    //input ratio de caudal
+    inlet
+   {
+    type				flowRateInletVelocity;
+    volumetricFlowRate				0.026; //Qd=0.026m3/s
+    extrapolateProfile  yes;
+    value				uniform (0 0 0);
+    }
+
+    //Input de hidrograma de velocidades
+  /* inlet
+    {
+    	type		uniformFixedValue; //hidrograma..FLujo transitorio, velocidades uniformes
+	uniformValue    table    	
+	(
+    		(0 (0 0 -0.25))
+    		(2 (0 0 -1))
+    		(5 (0 0 -1.5))
+    		(8 (0 0 -0.8))
+    		(9 (0 0 -0.3))
+         ); 
+     }*/
+
+    concreteWall
+    {
+        type            fixedValue;
+        value		uniform (0 0 0);
+    }
+    difusor1
+    {
+        type            fixedValue;
+        value		uniform (0 0 0);
+    }
+    difusor2
+    {
+        type            fixedValue;
+        value		uniform (0 0 0);
+    }
+    pipe1
+    {
+        type            fixedValue;
+        value		uniform (0 0 0);
+    }
+    pipe2
+    {
+        type            fixedValue;
+        value		uniform (0 0 0);
+    }
+    pipe3
+    {
+        type            fixedValue;
+        value		uniform (0 0 0);
+    }
+    excesos
+    {
+        type            fixedValue;
+        value		uniform (0 0 0);
+    }
+    atmosphere
+    {
+        type            pressureInletOutletVelocity;
+        value           uniform (0 0 0);
+    }
+     ".*"
+    {
+        type            zeroGradient;
+    }
+}
+
+
+// ************************************************************************* //
