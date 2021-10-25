@@ -17,7 +17,7 @@ FoamFile
 
 dimensions      [0 2 -1 0 0 0 0];
 
-internalField   uniform 0.0092;
+internalField   uniform 0.00067;
 
 boundaryField
 {
@@ -26,12 +26,32 @@ boundaryField
         type            nutkWallFunction; //nutkRoughWallFunction
         value           uniform 0.0092;
     }
-    steelWall_us
+    difusor1
     {
         type            nutkWallFunction;
         value           uniform 0.0092;
     }
-    steelWall_ds
+    difusor2
+    {
+        type            nutkWallFunction;
+        value           uniform 0.0092;
+    }
+    pipe1
+    {
+        type            nutkWallFunction;
+        value           uniform 0.0092;
+    }
+    pipe2
+    {
+        type            nutkWallFunction;
+        value           uniform 0.0092;
+    }
+    pipe3
+    {
+        type            nutkWallFunction;
+        value           uniform 0.0092;
+    }
+    excesos
     {
         type            nutkWallFunction;
         value           uniform 0.0092;

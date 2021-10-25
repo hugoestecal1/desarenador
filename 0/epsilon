@@ -17,7 +17,7 @@ FoamFile
 
 dimensions      [0 2 -3 0 0 0 0];
 
-internalField   uniform 0.047;
+internalField   uniform 0.03019;
 
 boundaryField
 {
@@ -36,7 +36,12 @@ boundaryField
         type            epsilonWallFunction;
         value           $internalField;
     }
-    pipe2
+    vertedero1
+    {
+        type            epsilonWallFunction;
+        value           $internalField;
+    }
+    vertedero2
     {
         type            epsilonWallFunction;
         value           $internalField;

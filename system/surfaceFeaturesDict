@@ -14,7 +14,7 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-surfaces ("desarenador.stl" "inlet.stl" "outlet1.stl" "outlet2.stl" "outlet_princi.stl" "difusor1.stl" "difusor2.stl" "pipe1.stl" "pipe2.stl" "pipe3.stl" "excesos.stl"  "concreteWall.stl" "atmosphere.stl");
+surfaces ("desarenador.stl" "inlet.stl" "vertedero1.stl" "vertedero2.stl" "outlet2.stl" "outlet_princi.stl" "difusor1.stl" "difusor2.stl" "pipe1.stl" "pipe3.stl" "excesos.stl"  "concreteWall.stl" "atmosphere.stl");
 
 // Identify a feature when angle between faces < includedAngle
 includedAngle   150; //30

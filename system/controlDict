@@ -29,7 +29,7 @@ deltaT          0.01;
 
 writeControl    timeStep; //adjustableRunTime;
 
-writeInterval   10;
+writeInterval   1;
 
 purgeWrite      0;
 
@@ -54,7 +54,7 @@ maxDeltaT       1;
 
 functions 
 {
-    #includeFunc residuals(U,p,k,epsilon);
+    #includeFunc residuals(U,p,k,epsilon,Co);
 }
 
 // ************************************************************************* //

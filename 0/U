@@ -69,7 +69,12 @@ boundaryField
         type            fixedValue;
         value		uniform (0 0 0);
     }
-    pipe2
+    vertedero1
+    {
+        type            fixedValue;
+        value		uniform (0 0 0);
+    }
+    vertedero2
     {
         type            fixedValue;
         value		uniform (0 0 0);

@@ -17,44 +17,65 @@ FoamFile
 
 dimensions      [0 2 -1 0 0 0 0];
 
-internalField   uniform 0.0092;
+internalField   uniform 0.00067;
 
 boundaryField
 {
     concreteWall
     {
-        type            nutkWallFunction; //nutkRoughWallFunction
-        value           uniform 0.0092;
+        type            nutkRoughWallFunction;
+        Ks              uniform 0.030;
+        Cs              uniform 0.5;
+        value           $internalField; //viscosidad cinematica
     }
     difusor1
     {
-        type            nutkWallFunction;
-        value           uniform 0.0092;
+        type            nutkRoughWallFunction;
+        Ks              uniform 0.030;
+        Cs              uniform 0.5;
+        value           $internalField; //viscosidad cinematica
     }
     difusor2
     {
-        type            nutkWallFunction;
-        value           uniform 0.0092;
+        type            nutkRoughWallFunction;
+        Ks              uniform 0.030;
+        Cs              uniform 0.5;
+        value           $internalField; //viscosidad cinematica
     }
     pipe1
     {
-        type            nutkWallFunction;
-        value           uniform 0.0092;
+        type            nutkRoughWallFunction;
+        Ks              uniform 0.0015;
+        Cs              uniform 0.5;
+        value           $internalField; //viscosidad cinematica
     }
-    pipe2
+    vertedero1
     {
-        type            nutkWallFunction;
-        value           uniform 0.0092;
+        type            nutkRoughWallFunction;
+        Ks              uniform 0.030;
+        Cs              uniform 0.5;
+        value           $internalField; //viscosidad cinematica
+    }
+    vertedero2
+    {
+        type            nutkRoughWallFunction;
+        Ks              uniform 0.030;
+        Cs              uniform 0.5;
+        value           $internalField; //viscosidad cinematica
     }
     pipe3
     {
-        type            nutkWallFunction;
-        value           uniform 0.0092;
+        type            nutkRoughWallFunction;
+        Ks              uniform 0.0015;
+        Cs              uniform 0.5;
+        value           $internalField; //viscosidad cinematica
     }
     excesos
     {
-        type            nutkWallFunction;
-        value           uniform 0.0092;
+        type            nutkRoughWallFunction;
+        Ks              uniform 0.030;
+        Cs              uniform 0.5;
+        value           $internalField; //viscosidad cinematica
     }
     ".*"
     {

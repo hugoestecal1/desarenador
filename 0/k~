@@ -17,7 +17,7 @@ FoamFile
 
 dimensions      [0 2 -2 0 0 0 0];
 
-internalField   uniform 0.022;
+internalField   uniform 0.015;
 
 boundaryField
 {
@@ -25,7 +25,7 @@ boundaryField
     {
         type            fixedValue;
         intensity		0.05;
-        value           uniform 0.022; //$internalField
+        value           $internalField; //$internalField
     }
     concreteWall
     {
@@ -35,17 +35,17 @@ boundaryField
     difusor1
     {
         type            kqRWallFunction;
-        value           uniform 0.022;
+        value           $internalField;
     }
     difusor2
     {
         type            kqRWallFunction;
-        value           uniform 0.022;
+        value           $internalField;
     }
     pipe1
     {
         type            kqRWallFunction;
-        value           uniform 0.022;
+        value           $internalField;
     }
 	pipe2
     {
@@ -55,12 +55,12 @@ boundaryField
     pipe3
     {
         type            kqRWallFunction;
-        value           uniform 0.022;
+        value           $internalField;
     }
     excesos
     {
         type            kqRWallFunction;
-        value           uniform 0.022;
+        value           $internalField;
     }
     outlet
     {

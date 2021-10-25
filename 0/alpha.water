@@ -39,27 +39,34 @@ boundaryField
     {
         type            zeroGradient;
     }
-    pipe1
-    {
-        type            zeroGradient;
-    }
-     pipe2
-    {
-        type            zeroGradient;
-    }
-     pipe3
-    {
-        type            zeroGradient;
-    }
     excesos
     {
         type            zeroGradient;
     }
-	".*"
+	outlet2
     {
         type            zeroGradient;
     }
-
+    outlet_princi
+    {
+        type            zeroGradient;
+    }
+    pipe1
+    {
+        type            zeroGradient;
+    }
+    pipe3
+    {
+        type            zeroGradient;
+    }
+    vertedero1
+    {
+        type            zeroGradient;
+    }
+    vertedero2
+    {
+        type            zeroGradient;
+    }
     atmosphere
     {
         type            inletOutlet;
