@@ -23,38 +23,33 @@ startTime       0;
 
 stopAt          endTime;
 
-endTime         10;
+endTime         22;
 
-deltaT          0.01;
+deltaT          0.002;
 
-writeControl    timeStep; //adjustableRunTime;
+writeControl    adjustableRunTime;
 
-writeInterval   1;
+writeInterval   0.002;
 
 purgeWrite      0;
 
 writeFormat     ascii;
 
-writePrecision  8;
+writePrecision  7;
 
 writeCompression off;
 
 timeFormat      general;
 
-timePrecision   8;
+timePrecision   7;
 
 runTimeModifiable off;
 
 adjustTimeStep  off; //off, no
 
-maxCo           1;
-maxAlphaCo      1;
+maxCo           3;
+maxAlphaCo      3;
+maxDeltaT       3;
 
-maxDeltaT       1;
-
-functions 
-{
-    #includeFunc residuals(U,p,k,epsilon,Co);
-}
 
 // ************************************************************************* //

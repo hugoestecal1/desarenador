@@ -234,12 +234,12 @@ castellatedMeshControls
         difusor1
         {
             // Surface-wise min and max refinement level
-            level (4 4);
+            level (3 3);
         }
         difusor2
         {
             // Surface-wise min and max refinement level
-            level (4 4);
+            level (3 3);
         }
         pipe1
         {
@@ -254,7 +254,7 @@ castellatedMeshControls
         concreteWall
         {
             // Surface-wise min and max refinement level
-            level (4 4);
+            level (3 3);
         }
         excesos
         {

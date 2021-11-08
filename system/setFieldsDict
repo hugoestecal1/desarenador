@@ -21,13 +21,22 @@ defaultFieldValues
 );
 
 regions
+
 (
     boxToCell
     {
-        box (1.7 0 -2.8892) (11.03 3.15 0.288995);
+        box (1.7 0 -2.8892) (11.03 3.15 0.71);
         fieldValues
         (
             volScalarFieldValue alpha.water 1
+        );
+    }
+    boxToCell   //vertedero de entrada
+    {
+         box (0 0 0) (1.7 3.11863 0.8);
+         fieldValues
+        (
+             volScalarFieldValue alpha.water 1
         );
     }
 );
